@@ -1,0 +1,560 @@
+{
+	"info": {
+		"_postman_id": "24a132f9-4435-49ae-b81f-b829a635186f",
+		"name": "DCEAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "GetCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"3fa85f64-5717-4562-c3fc-2c963f66afa6\",\r\n  \"userName\": \"ByronFields\",\r\n  \"email\": \"Byron@gmail.com\",\r\n  \"firstName\": \"Byron\",\r\n  \"lastName\": \"Fields\",\r\n  \"createdOn\": \"2022-11-21T16:43:10.298Z\",\r\n  \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7051/api/Customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"3fa85f64-5717-4562-c3fb-2c963f66afa6\",\r\n  \"userName\": \"LindsayHowell\",\r\n  \"email\": \"Lindsay@gmail.com\",\r\n  \"firstName\": \"Lindsay\",\r\n  \"lastName\": \"Howell\",\r\n  \"createdOn\": \"2022-11-21T16:43:10.298Z\",\r\n  \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7051/api/Customer?id=3fa85f64-5717-4562-c3fb-2c963f66afa6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Customer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3fa85f64-5717-4562-c3fb-2c963f66afa6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Customer/?id=3fa85f64-5717-4562-c3fc-2c963f66afa6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Customer",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3fa85f64-5717-4562-c3fc-2c963f66afa6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomerById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Customer/?id=3fa85f64-5717-4562-c3fb-2c963f66afa6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Customer",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3fa85f64-5717-4562-c3fb-2c963f66afa6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "GetOrder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa2\",\r\n  \"productId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"orderStatus\": 1,\r\n  \"orderType\": 1,\r\n  \"orderBy\": \"3fa85f64-5717-4562-c3fa-2c963f66afa6\",\r\n  \"orderedOn\": \"2022-11-21T16:55:24.836Z\",\r\n  \"shippedOn\": \"2022-11-21T16:55:24.836Z\",\r\n  \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7051/api/Order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOrder",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "id",
+								"value": "3fa85f64-5717-4562-b3fc-2c963f66afa2",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa2\",\r\n  \"productId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"orderStatus\": 1,\r\n  \"orderType\": 1,\r\n  \"orderBy\": \"3fa85f64-5717-4562-c3fa-2c963f66afa6\",\r\n  \"orderedOn\": \"2022-11-21T16:55:24.836Z\",\r\n  \"shippedOn\": \"2022-11-21T16:55:24.836Z\",\r\n  \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7051/api/Order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Order?id=3fa85f64-5717-4562-b3fc-2c963f66afa2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Order"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3fa85f64-5717-4562-b3fc-2c963f66afa2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Order?id=3fa85f64-5717-4562-b3fc-2c963f66afa2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Order"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3fa85f64-5717-4562-b3fc-2c963f66afa2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "GetSupplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Supplier",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddSupplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"supplierId\": \"3fa85f64-5717-4562-b4fd-2c963f66afa6\",\r\n  \"supplierName\": \"Supplier4\",\r\n  \"createdOn\": \"2022-11-21T16:57:01.397Z\",\r\n  \"isActive\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7051/api/Supplier",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSupplier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"supplierId\": \"3fa85f64-5717-4562-c3fb-2c963f66afa6\",\r\n  \"supplierName\": \"Supplier3\",\r\n  \"createdOn\": \"2022-11-21T16:43:10.298Z\",\r\n  \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7051/api/Supplier?id=3fa85f64-5717-4562-b1fd-2c963f66afa6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Supplier"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3fa85f64-5717-4562-b1fd-2c963f66afa6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSupplier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Supplier?id=3fa85f64-5717-4562-b4fd-2c963f66afa6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Supplier"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3fa85f64-5717-4562-b4fd-2c963f66afa6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSupplierById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Supplier?id=3fa85f64-5717-4562-b2fd-2c963f66afa6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Supplier"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3fa85f64-5717-4562-b2fd-2c963f66afa6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "GetProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"3fa85f64-5717-4562-b4ec-2c963f66afa6\",\r\n  \"productName\": \"Product2\",\r\n  \"unitPrice\": 500.00,\r\n  \"supplierId\": \"3fa85f64-5717-4562-c3fb-2c963f66afa6\",\r\n  \"createdOn\": \"2022-11-21T16:42:18.475Z\",\r\n  \"isActive\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7051/api/product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Supplier",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7051/api/Supplier?id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Supplier"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "id",
+								"value": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7051/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7051",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
